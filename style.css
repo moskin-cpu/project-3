@@ -1,0 +1,94 @@
+/* Import Google Font 'Lato' */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Basic setup and browser-native font for headings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; /* Imported font */
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6em; /* Relative unit */
+}
+
+h1, h2 {
+  font-family: Georgia, serif; /* Browser-native font */
+  color: #005a9c; /* Style element 1 */
+}
+
+/* --- Navigation --- */
+/* Style the <nav> element itself */
+nav {
+  background-color: #333; /* Style element 2 */
+  width: 100%;
+}
+
+/* Style the navigation list */
+nav ul {
+  list-style-type: none; /* Removes list style */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centers the horizontal navigation */
+}
+
+/* Style the navigation links */
+nav li a {
+  display: block;
+  color: white;
+  text-decoration: none; /* Style element 3 */
+  font-weight: bold;
+  padding: 1rem 1.5rem; /* Relative units */
+}
+
+nav li a:hover {
+  background-color: #555;
+}
+
+/* --- Layout Containers --- */
+
+/* Fluid layout for home and bowling pages */
+.container-fluid {
+  width: 90%; /* Relative unit */
+  max-width: 1200px; /* Max size in px is allowed */
+  margin: 2rem auto; /* Relative unit */
+  padding: 2rem; /* Relative unit */
+  background-color: #ffffff; /* Style element 4 */
+  border-radius: 8px; /* Style element 5 */
+}
+
+/* Fixed-width layout for resume page */
+.container-fixed {
+  width: 960px; /* Fixed width */
+  margin: 2rem auto; /* Relative unit */
+  padding: 2rem; /* Relative unit */
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* --- Content Styling (applies to all pages) --- */
+
+/* Ensure media items are responsive */
+img, video, audio {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem; /* Relative unit */
+}
+
+/* Specific styles for resume skills list */
+#resume-skills li {
+  background-color: #eaf6ff;
+  margin-bottom: 0.5em; /* Relative unit */
+  padding: 0.5em; /* Relative unit */
+}
+
+/* Style headings */
+h1 {
+  border-bottom: 3px solid #005a9c;
+  padding-bottom: 0.5rem; /* Relative unit */
+}
+
+h2 {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.25rem; /* Relative unit */
+}
