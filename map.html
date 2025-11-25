@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Map Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">index.html</a></li>
+        <li><a href="resume.html">resume.html</a></li>
+        <li><a href="page3.html">page3.html</a></li>
+        <li><a href="map.html">map.html</a></li>
+      </ul>
+    </nav>
+
+    <h1>My Map</h1>
+
+    <div id="map"></div>
+
+    <button id="questionBtn">Questions?</button>
+
+    <script>
+      // Google Maps function
+      function initMap() {
+        const center = { lat: 41.8781, lng: -87.6298 }; // Chicago
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: center,
+        });
+
+        const marker = new google.maps.Marker({
+          position: center,
+          map: map,
+          title: "Chicago",
+        });
+
+        const info = new google.maps.InfoWindow({
+          content: "<b>Chicago, Illinois</b>",
+        });
+
+        marker.addListener("click", () => {
+          info.open(map, marker);
+        });
+      }
+      window.initMap = initMap;
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap" async defer></script>
+
+  </body>
+</html>
